@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Midnight Snack | A Film by Fisher</title>
+    <style>
+        /* Exact color theme extracted from Poster.png */
+        :root {
+            --poster-black: #111111;       
+            --poster-cream: #E5D399;       
+            --boy-green: #4CA64C;          
+            --text-light: #ECE6D5;         
+            --card-bg: #1A1A1A;            
+        }
+
+        body {
+            background-color: var(--poster-black);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(17, 17, 17, 0.95);
+            border-bottom: 2px solid var(--poster-cream);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--poster-cream);
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-light);
+            text-shadow: 0 0 8px var(--poster-cream);
+        }
+
+        /* Layout Containers */
+        .container {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            padding-top: 60px;
+        }
+
+        h1, h2, h3 {
+            color: var(--poster-cream);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            border-bottom: 2px solid var(--poster-cream);
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 1px solid rgba(229, 211, 153, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            text-align: center;
+            font-style: italic;
+            color: var(--poster-cream);
+            margin-top: -20px;
+            margin-bottom: 40px;
+        }
+
+        /* Poster Wrapper */
+        .poster-container {
+            text-align: center;
+            margin: 30px auto;
+            max-width: 600px;
+            border: 3px solid var(--poster-cream);
+            padding: 10px;
+            background-color: #000000;
+        }
+
+        .poster-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Character Grid Style (Text-focused) */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 4px;
+            border: 1px solid rgba(229, 211, 153, 0.2);
+        }
+
+        /* Video Player Styling */
+        .video-wrapper {
+            background-color: #000000;
+            border: 2px solid var(--poster-cream);
+            box-shadow: 0 0 15px rgba(229, 211, 153, 0.1);
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            outline: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(229, 211, 153, 0.2);
+            font-size: 0.8rem;
+            color: var(--poster-cream);
+        }
+
+        .highlight { 
+            color: var(--poster-cream); 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#blueprint">The Blueprint</a>
+        <a href="#director">The Director</a>
+        <a href="#watch">Watch Film</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- SECTION: ABOUT -->
+        <section id="about">
+            <h1>The Midnight Snack</h1>
+            <p class="tagline">— One mission. Zero sound. —</p>
+            
+            <div class="poster-container">
+                <img src="Poster.png" alt="The Midnight Snack Movie Poster" class="poster-image">
+            </div>
+            
+            <h2>Synopsis</h2>
+            <p>The house is silent. The clock strikes 2:00 AM. For most, it’s a time for deep sleep, but for one hungry boy, it’s the start of the most dangerous mission of his life. follows a young boy on a high stakes, stealth driven quest through a dark, obstacle house to reach a jar full of cookies.</p>
+            
+            <p>Between the boy and his prize lies a minefield of household security systems. He must navigate creaky floorboards that threaten to alert the house, a heavy sleeping family dog, a watchful cat hiding in the shadows, and a parrot capable of blowing his cover at any moment. It’s a 5 minute animation exploring the tension between silence and a craving.</p>
+        </section>
+
+        <!-- SECTION: THE BLUEPRINT -->
+        <section id="blueprint">
+            <h2>The Blueprint</h2>
+            <p><em>The technical architecture and structural pipeline behind the film.</em></p>
+            
+            <h3>Character Profiles</h3>
+            <div class="char-grid">
+                <div class="char-card">
+                    <h3>Ben</h3>
+                    <p><strong>Role:</strong> The Stealth Specialist</p>
+                    <p><strong>Tactical Status:</strong> Operating barefoot for maximum noise suppression to bypass Jack the dog. Relies on local objects wooden chairs to clear vertical obstacles and bypass perimeter security.</p>
+                </div>
+            </div>
+
+            <h3>Sound Architecture</h3>
+            <p>Engineered entirely inside <span class="highlight">FL Studio</span>. The project flips traditional scoring conventions by treating absolute silence as the primary tracking instrument, layered against hyper-isolated, high-gain foley elements to maximize psychological suspense.</p>
+        </section>
+
+        <!-- SECTION: THE DIRECTOR -->
+        <section id="director">
+            <h2>The Director</h2>
+            <div class="char-card">
+                <h3>Lefika Isaac Mbakile (Fisher)</h3>
+                <p>Final-year Creative Multimedia student at Limkokwing University. Creator of the "Fisher Stamp" protocol, focusing on clean technical execution, strict framework pipelines, and precise narrative pacing.</p>
+                <p><strong>Contact:</strong> Available via academic portal and official portfolio channels.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: WATCH FILM -->
+        <section id="watch">
+            <h2>Watch Film</h2>
+            <div class="video-wrapper">
+                <video controls poster="Poster.png">
+                    <source src="TheMidnightSnack.mp4" type="video/mp4">
+                    Your browser does not support the video tag. Please update your browser to view this content.
+                </video>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Fisher Stamp Production. Major Project — Limkokwing University.
+    </footer>
+
+</body>
+</html>

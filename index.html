@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - FisherMedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 40px;
+            background-color: var(--background); /* Use a subtle background */
+            min-height: calc(100vh - 80px); /* Fill the screen height */
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: var(--dark-blue);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons a {
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-right: 20px;
+        }
+
+        /* --- CHANGE IMPLEMENTED HERE ---
+        1. Changed .btn-primary to match the styling of .btn-secondary 
+        2. Renamed class on "View Portfolio" below to .btn-secondary 
+        */
+        .hero-buttons .btn-secondary {
+            background-color: transparent;
+            color: var(--dark-blue);
+            border: 2px solid var(--dark-blue);
+        }
+
+        .hero-buttons .btn-secondary:hover {
+            background-color: var(--dark-blue);
+            color: white;
+        }
+
+        /* IMAGE CONTAINER STYLES */
+        .hero-image-container {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 400px; /* Limit image size */
+            height: auto;
+            border-radius: 50%; /* Make the image round */
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 8px solid var(--primary-color); /* Add a border for flair */
+        }
+        
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 20px;
+            }
+            .hero-text {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            .hero-image-container {
+                width: 70%;
+            }
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-buttons a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h1 class="logo"><span class="logo-primary">Fisher</span>Media</h1>
+            <ul class="nav-links">
+                <li class="active"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="contact-info">
+                <p class="get-in-touch">Get in touch</p>
+                <a href="mailto:hello@fishermedia.com">hello@fishermedia.com</a>
+                <a href="tel:+72994890">+72994890</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <section class="hero-section">
+                
+                <div class="hero-text">
+                    <h1>Hi, I'm Lefika, a <span>Digital Creative</span>.</h1>
+                    <p>
+                        I specialize in creating engaging 3D animations, polished graphic design, and compelling video production. Take a look at my portfolio to see how I can bring your vision to life.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="portfolio.html" class="btn-secondary">View Portfolio</a> 
+                        <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <img src="assets/lefika.jpg" alt="Lefika, Digital Creative" class="hero-image">
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - FisherMedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ADDED STYLES FOR THE CONTACT FORM AND NOTIFICATION */
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns for info and form */
+            gap: 40px;
+            padding: 40px;
+            background-color: var(--background); /* Use the main background color */
+            border-radius: 8px;
+        }
+
+        .contact-info-section h2, .form-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: var(--dark-blue);
+        }
+
+        .contact-info-section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-details div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-details i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.5em;
+        }
+
+        /* --- FORM STYLES --- */
+        .contact-form label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--dark-blue);
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+            font-size: 1em;
+            margin-bottom: 10px;
+            resize: vertical; /* Allow vertical resizing of textarea */
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--dark-blue);
+        }
+        
+        /* --- NOTIFICATION STYLES --- */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50; /* Green success color */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensure it stays on top */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .notification.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h1 class="logo"><span class="logo-primary">Fisher</span>Media</h1>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li class="active"><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="contact-info">
+                <p class="get-in-touch">Get in touch</p>
+                <a href="mailto:hello@fishermedia.com">hello@fishermedia.com</a>
+                <a href="tel:+72994890">+72994890</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <h1>Contact Us</h1>
+
+            <div class="contact-content">
+                
+                <div class="contact-info-section">
+                    <h2>We'd Love to Hear From You!</h2>
+                    <p>
+                        Whether you have a question about our projects, need a quote for a new venture, or just want to say hello, our team is ready to connect. Use the form or the details below to reach us.
+                    </p>
+
+                    <div class="contact-details">
+                        <div>
+                            <i class="fas fa-phone-alt"></i>
+                            <p>Phone: +72994890</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            <p>Email: hello@fishermedia.com</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Location: Gaborone, Botswana</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="formNotification" class="notification">
+        <i class="fas fa-check-circle"></i> Message sent successfully!
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // 1. Prevent the actual form submission (since this is a front-end only demo)
+            event.preventDefault(); 
+            
+            // 2. Get the notification element
+            const notification = document.getElementById('formNotification');
+            
+            // 3. Display the notification
+            notification.classList.add('show');
+
+            // 4. Clear the form fields (optional, but good practice)
+            event.target.reset();
+
+            // 5. Hide the notification after 4 seconds
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 4000);
+            
+            // In a real website, the code below would handle sending the data to a server:
+            // fetch('/submit-form', { method: 'POST', body: new FormData(event.target) })
+            // .then(response => { /* handle server response */ })
+        });
+    </script>
+</body>
+</html>

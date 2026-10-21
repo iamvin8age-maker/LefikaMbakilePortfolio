@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - FisherMedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h1 class="logo"><span class="logo-primary">Fisher</span>Media</h1>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="contact-info">
+                <p class="get-in-touch">Get in touch</p>
+                <a href="mailto:hello@fishermedia.com">hello@fishermedia.com</a>
+                <a href="tel:+72994890">+72994890</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            
+            <section id="portfolio-view" class="portfolio-header">
+                <h1>Our Creative Portfolio</h1>
+                
+                <div class="projects-grid">
+                    <a onclick="showProjectDetail('midnightsnack')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/Themidnightsnack.mp4"></video></div>
+                        <div class="project-info"><h3>The Midnight Snack</h3><p>5 Minute 2D Animated Short</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('midnightposter')" class="project-card">
+                        <div class="media-preview"><img src="assets/Poster.png" alt="The Midnight Snack Poster"></div>
+                        <div class="project-info"><h3>The Midnight Snack Poster</h3><p>Animation Poster</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('houseplanning')" class="project-card">
+                        <div class="media-preview"><img src="assets/House Planning 3D.png" alt="House Planning"></div>
+                        <div class="project-info"><h3>House Planning</h3><p>3D Visualization</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('typeface')" class="project-card">
+                        <div class="media-preview"><img src="assets/Typeface Production.jpg" alt="A Typeface Poster"></div>
+                        <div class="project-info"><h3>A Typeface Poster</h3><p>Font Promotional Design</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('vfx')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/LefikaMbakileVFXAss3 FINAL.mp4"></video></div>
+                        <div class="project-info"><h3>Visual Effects</h3><p>VFX Execution</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('music')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/Isaac Fishér - Good Wave (ft. Biq J Musiq)(720P_HD).mp4"></video></div>
+                        <div class="project-info"><h3>Music Production</h3><p>Isaac Fisher - Good Wave</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('poster')" class="project-card">
+                        <div class="media-preview"><img src="assets/LefikaMbakile_POSTER_FINAL[1].jpg" alt="Poster"></div>
+                        <div class="project-info"><h3>Poster Production</h3><p>Isaac Fisher Entertainment</p></div>
+                    </a>
+                    
+                    <a onclick="showProjectDetail('gif')" class="project-card">
+                        <div class="media-preview"><img src="assets/WALKCYCLE.gif" alt="GIF"></div>
+                        <div class="project-info"><h3>GIF Production</h3><p>2D walkcycle animation</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('title')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/freecompress-Lefika Title Sequence.mp4"></video></div>
+                        <div class="project-info"><h3>Title Sequence</h3><p>Short title sequence</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('trailer')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/freecompress-Lefika's Trailer.mp4"></video></div>
+                        <div class="project-info"><h3>Trailer</h3><p>Thriller film trailer</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('bookcover')" class="project-card">
+                        <div class="media-preview"><img src="assets/Screenshot_for book cover.jpg" alt="Book Cover"></div>
+                        <div class="project-info"><h3>Book Cover</h3><p>Jim & Friends</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('jingle')" class="project-card">
+                        <div class="media-preview" style="background-color: var(--light-bg); padding: 10px;"><audio controls style="width: 100%; height: 50px;"><source src="assets/Lefika Mbakile Radio Jingle_mixdown.wav" type="audio/wav"></audio></div>
+                        <div class="project-info"><h3>Radio Jingle</h3><p>Commercial use</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('2danimation')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/Lefika Mbakile Animation.mp4"></video></div>
+                        <div class="project-info"><h3>2D Animation</h3><p>Giving life to the radio jingle</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('alien')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/3D 2 ASS2/Lefika Project - Praying0001-0200.mp4"></video></div>
+                        <div class="project-info"><h3>Alien Character Animation</h3><p>Multiple Body Movements</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('wallpaper')" class="project-card">
+                        <div class="media-preview"><img src="assets/Screenshot_for wallpaper.jpg" alt="Wallpaper"></div>
+                        <div class="project-info"><h3>Wallpaper</h3><p>Computer Wallpaper</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('3danimation')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/Lefika 3d.mp4"></video></div>
+                        <div class="project-info"><h3>3D Animation</h3><p>1 minute clip</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('infographic')" class="project-card">
+                        <div class="media-preview"><img src="assets/infographic.jpg" alt="Infographic"></div>
+                        <div class="project-info"><h3>Professional Timetable</h3><p>Student's day timetable</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('magazine')" class="project-card">
+                        <div class="media-preview"><img src="assets/Magazine Cover.jpg" alt="Magazine"></div>
+                        <div class="project-info"><h3>Magazine Cover</h3><p>Magazine Design</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('rotation')" class="project-card">
+                        <div class="media-preview"><img src="assets/Character-Rotation.gif" alt="Rotation"></div>
+                        <div class="project-info"><h3>Character Rotation</h3><p>Cartoon character design</p></div>
+                    </a>
+
+                    <a onclick="showProjectDetail('30sec')" class="project-card">
+                        <div class="media-preview"><video controls src="assets/Issac Animation.mov"></video></div>
+                        <div class="project-info"><h3>30 sec animation</h3><p>Animation from rotation</p></div>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="project-detail-view" style="display: none;">
+                <div class="detail-header">
+                    <button class="back-btn" onclick="showView('portfolio')"><i class="fas fa-arrow-left"></i> Back to Portfolio</button>
+                    <h1 id="detail-title"></h1>
+                </div>
+
+                <div class="detail-media-area" id="detail-media"></div>
+
+                <div class="detail-overview">
+                    2>Project Overview</h2>
+                    <p id="detail-description"></p>
+                    <p id="detail-extra-info" style="font-size: 0.9em; color: #666; font-style: italic; margin-top: 10px;"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const projects = {
+            'midnightsnack': { title: 'The Midnight Snack', file: 'assets/Themidnightsnack.mp4', type: 'video', description: 'A 5 minute 2D animated video.' },
+            'midnightposter': { title: 'The Midnight Snack Poster', file: 'assets/Poster.png', type: 'image', description: 'A Poster advertising my 5 animation' },
+            'houseplanning': { title: 'House Planning', file: 'assets/House Planning 3D.png', type: 'image', description: 'A 3D visualization of a room plan' },
+            'typeface': { title: 'A Typeface Poster', file: 'assets/Typeface Production.jpg', type: 'image', description: 'A poster promoting a new font for a typing business' },
+            'vfx': { title: 'Visual Effects', file: 'assets/LefikaMbakileVFXAss3 FINAL.mp4', type: 'video', description: 'VFX execution' },
+            'music': { title: 'Music Production', file: 'assets/Isaac Fishér - Good Wave (ft. Biq J Musiq)(720P_HD).mp4', type: 'video', description: "This song captures a laid-back, positive vibe." },
+            'poster': { title: 'Poster Production', file: 'assets/LefikaMbakile_POSTER_FINAL[1].jpg', type: 'image', description: "Designed a striking poster for Isaac Fisher Entertainment." },
+            'gif': { title: 'GIF Production', file: 'assets/WALKCYCLE.gif', type: 'image', description: "A classic 2D walkcycle animation." },
+            'title': { title: 'Title Sequence', file: 'assets/freecompress-Lefika Title Sequence.mp4', type: 'video', description: "An engaging title sequence." },
+            'trailer': { title: 'Trailer', file: "assets/freecompress-Lefika's Trailer.mp4", type: 'video', description: "A tense, atmospheric trailer." },
+            'bookcover': { title: 'Book Cover', file: "assets/Screenshot_for book cover.jpg", type: 'image', description: "Book cover for 'Jim & Friends'." },
+            'jingle': { title: 'Radio Jingle', file: "assets/Lefika Mbakile Radio Jingle_mixdown.wav", type: 'audio', description: "Radio jingle for commercial use." },
+            '2danimation': { title: '2D Animation', file: 'assets/Lefika Mbakile Animation.mp4', type: 'video', description: "Giving life to the radio jingle" },
+            'alien': { title: 'Alien Character Animation', files: ["assets/3D 2 ASS2/Lefika Project - Jumping Jacks0001-0090.mp4", "assets/3D 2 ASS2/Lefika Project - Praying0001-0200.mp4", "assets/3D 2 ASS2/Lefika Project - Push-ups_Press-ups0001-0102.mp4", "assets/3D 2 ASS2/Lefika Project - Run to Flip0001-0068.mp4", "assets/3D 2 ASS2/Lefika Project - Running0001-0033.mp4", "assets/3D 2 ASS2/Lefika Project - Sitting down0001-0068.mp4", "assets/3D 2 ASS2/Lefika Project - Standing up0001-0099.mp4", "assets/3D 2 ASS2/Lefika Project - Walking0001-0089.mp4"], type: 'multi-video', description: "3D character rigging and animation fidelity." },
+            'wallpaper': { title: 'Wallpaper', file: "assets/Screenshot_for wallpaper.jpg", type: 'image', description: "High-resolution digital wallpaper." },
+            '3danimation': { title: '3D Animation', file: "assets/Lefika 3d.mp4", type: 'video', description: "A 1 minute animation clip" },
+            'infographic': { title: 'Professional Timetable Infographic', file: "assets/infographic.jpg", type: 'image', description: "A timetable of a students day" },
+            'magazine': { title: 'Magazine Cover', files: ["assets/Magazine Cover.jpg", "assets/Magazine Contents Page.jpg"], type: 'multi-image', description: "Magazine Cover Design" },
+            'rotation': { title: 'Character Rotation', file: "assets/Character-Rotation.gif", type: 'image', description: "A Character made for cartoons" },
+            '30sec': { title: '30 sec animation', file: "assets/Issac Animation.mov", type: 'video', description: "A 30 seconds animaion made from the character in the character rotation" }
+        };
+
+        function showView(viewId) {
+            const portfolioGrid = document.getElementById('portfolio-view');
+            const projectDetail = document.getElementById('project-detail-view');
+            if (viewId === 'portfolio') {
+                document.getElementById('detail-media').innerHTML = '';
+                portfolioGrid.style.display = 'block';
+                projectDetail.style.display = 'none';
+            } else if (viewId === 'detail') {
+                portfolioGrid.style.display = 'none';
+                projectDetail.style.display = 'block';
+            }
+        }
+
+        function showProjectDetail(projectId) {
+            const project = projects[projectId];
+            if (!project) return;
+            document.getElementById('detail-title').textContent = project.title;
+            document.getElementById('detail-description').textContent = project.description;
+            
+            const extraInfo = document.getElementById('detail-extra-info');
+            extraInfo.textContent = (project.type === 'multi-video' || project.type === 'multi-image') ? "Click to view more." : "";
+
+            const mediaArea = document.getElementById('detail-media');
+            mediaArea.innerHTML = '';
+            
+            if (project.type === 'video' || project.type === 'image') {
+                mediaArea.innerHTML = project.type === 'video' ? `<video controls autoplay loop src="${project.file}">Your browser does not support the video tag.</video>` : `<img src="${project.file}" alt="${project.title}">`;
+            } else if (project.type === 'audio') {
+                mediaArea.innerHTML = `<audio controls autoplay style="width: 80%; margin: 40px auto; display: block;" src="${project.file}">Your browser does not support the audio element.</audio>`;
+            } else if (project.type === 'multi-video') {
+                mediaArea.style.display = 'grid';
+                mediaArea.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
+                project.files.forEach(file => {
+                    mediaArea.innerHTML += `<div style="text-align: center;"><video controls style="width: 100%; margin-bottom:10px;"><source src="${file}" type="video/mp4"></video></div>`;
+                });
+            } else if (project.type === 'multi-image') {
+                mediaArea.style.display = 'grid';
+                mediaArea.style.gridTemplateColumns = 'repeat(auto-fit, minmax(300px, 1fr))';
+                project.files.forEach(file => {
+                    mediaArea.innerHTML += `<div style="text-align: center;"><img src="${file}" style="width: 100%; margin-bottom:10px;"></div>`;
+                });
+            }
+            showView('detail');
+            window.scrollTo(0, 0);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { showView('portfolio'); });
+    </script>
+</body>
+</html>
