@@ -12,9 +12,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 80px 40px;
-            background-color: var(--background); /* Use a subtle background */
-            min-height: calc(100vh - 80px); /* Fill the screen height */
+            padding: 40px 20px;
+            min-height: calc(100vh - 80px);
         }
 
         .hero-text {
@@ -22,34 +21,35 @@
         }
 
         .hero-text h1 {
-            font-size: 3.5em;
+            font-size: 3em;
             margin-bottom: 20px;
             color: var(--dark-blue);
         }
 
         .hero-text h1 span {
-            color: var(--primary-color);
+            color: var(--orange);
         }
 
         .hero-text p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-bottom: 30px;
             line-height: 1.6;
         }
 
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         .hero-buttons a {
             text-decoration: none;
-            padding: 15px 30px;
+            padding: 12px 25px;
             border-radius: 50px;
             font-weight: bold;
             transition: all 0.3s ease;
-            margin-right: 20px;
         }
 
-        /* --- CHANGE IMPLEMENTED HERE ---
-        1. Changed .btn-primary to match the styling of .btn-secondary 
-        2. Renamed class on "View Portfolio" below to .btn-secondary 
-        */
         .hero-buttons .btn-secondary {
             background-color: transparent;
             color: var(--dark-blue);
@@ -61,7 +61,6 @@
             color: white;
         }
 
-        /* IMAGE CONTAINER STYLES */
         .hero-image-container {
             width: 40%;
             display: flex;
@@ -72,35 +71,32 @@
 
         .hero-image {
             width: 100%;
-            max-width: 400px; /* Limit image size */
+            max-width: 350px;
             height: auto;
-            border-radius: 50%; /* Make the image round */
+            border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 8px solid var(--primary-color); /* Add a border for flair */
+            border: 6px solid var(--orange);
         }
-        
-        /* Media Queries for Responsiveness */
+
         @media (max-width: 768px) {
             .hero-section {
                 flex-direction: column;
                 text-align: center;
-                padding: 60px 20px;
+                padding: 20px 10px;
             }
             .hero-text {
                 max-width: 100%;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
+            }
+            .hero-text h1 {
+                font-size: 2.2em;
             }
             .hero-image-container {
-                width: 70%;
+                width: 80%;
             }
             .hero-buttons {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .hero-buttons a {
-                margin: 10px 0;
+                justify-content: center;
             }
         }
     </style>

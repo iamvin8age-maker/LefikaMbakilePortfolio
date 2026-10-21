@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ADDED STYLES FOR THE CONTACT FORM AND NOTIFICATION */
-        
         .contact-content {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two columns for info and form */
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
-            padding: 40px;
-            background-color: var(--background); /* Use the main background color */
+            padding: 30px;
+            background-color: var(--white);
             border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .contact-info-section h2, .form-section h2 {
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin-bottom: 20px;
             color: var(--dark-blue);
         }
@@ -37,16 +36,15 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            font-size: 1.1em;
+            font-size: 1em;
         }
 
         .contact-details i {
-            color: var(--primary-color);
+            color: var(--orange);
             margin-right: 15px;
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
 
-        /* --- FORM STYLES --- */
         .contact-form label {
             display: block;
             margin-top: 15px;
@@ -61,21 +59,22 @@
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+            box-sizing: border-box;
             font-size: 1em;
             margin-bottom: 10px;
-            resize: vertical; /* Allow vertical resizing of textarea */
+            resize: vertical;
         }
 
         .contact-form button {
-            background-color: var(--primary-color);
+            background-color: var(--orange);
             color: white;
-            padding: 15px 25px;
+            padding: 12px 25px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1.1em;
-            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 15px;
             transition: background-color 0.3s;
         }
 
@@ -83,23 +82,30 @@
             background-color: var(--dark-blue);
         }
         
-        /* --- NOTIFICATION STYLES --- */
         .notification {
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #4CAF50; /* Green success color */
+            background-color: #4CAF50;
             color: white;
             padding: 15px 25px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* Ensure it stays on top */
+            z-index: 1000;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
         
         .notification.show {
             opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 20px;
+            }
         }
     </style>
 </head>
@@ -122,7 +128,7 @@
         </nav>
 
         <main class="content">
-            <h1>Contact Us</h1>
+            <h1 style="margin-bottom: 20px; color: var(--dark-blue);">Contact Us</h1>
 
             <div class="contact-content">
                 
@@ -176,26 +182,13 @@
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            // 1. Prevent the actual form submission (since this is a front-end only demo)
             event.preventDefault(); 
-            
-            // 2. Get the notification element
             const notification = document.getElementById('formNotification');
-            
-            // 3. Display the notification
             notification.classList.add('show');
-
-            // 4. Clear the form fields (optional, but good practice)
             event.target.reset();
-
-            // 5. Hide the notification after 4 seconds
             setTimeout(function() {
                 notification.classList.remove('show');
             }, 4000);
-            
-            // In a real website, the code below would handle sending the data to a server:
-            // fetch('/submit-form', { method: 'POST', body: new FormData(event.target) })
-            // .then(response => { /* handle server response */ })
         });
     </script>
 </body>
